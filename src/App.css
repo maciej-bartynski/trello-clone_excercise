@@ -1,0 +1,7 @@
+.list, 
+.header,
+.listitem{
+-webkit-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+-moz-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+}
