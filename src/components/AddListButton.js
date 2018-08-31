@@ -1,7 +1,13 @@
 import React from 'react';
-
+const positioner={
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+}
 const addpanelstyle = {
-    width: '50%',
+    width: '100%',
     height: '30px',
     borderRadius: '10px',
     overflow: 'hidden',
@@ -54,9 +60,11 @@ class AddListButton extends React.Component {
     }
     render() {
         return (
-            < div style={addpanelstyle} >
-                <input style={addinputstyle} id="newlistname" type="text"/>
-                <button style={addbuttonstyle} id="addnewlist">New list</button>
+            <div className='gridcontainer' style={positioner}>
+                <div style={addpanelstyle} >
+                    <input style={addinputstyle} id="newlistname" type="text"/>
+                    <button style={addbuttonstyle} id="addnewlist">New list</button>
+                </div>
             </div>
         );
     }
