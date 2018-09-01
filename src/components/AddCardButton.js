@@ -37,7 +37,7 @@ class AddCardButton extends React.Component {
         name = name.trim().length>0?name:'New task '+this.count;
         this.count = this.count+1;
         let currentData = JSON.parse(localStorage.getItem('initialData'));
-        currentData[this.props.objectid]['cards'].push({title: name, description: ''});
+        currentData[this.props.objectid]['cards'].push({title: name, description: '', sets: [0,0,0,false]});
         localStorage.setItem('initialData', JSON.stringify(currentData));
         this.props.newstorage();
     }

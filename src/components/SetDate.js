@@ -66,7 +66,6 @@ class SetDate extends Component {
         this.setthecolor = this.setthecolor.bind(this)
     }
     setthecolor(date){ 
-        console.log('setcolor1')
        let year = parseFloat(date.innerText.charAt(0) + date.innerText.charAt(1) + date.innerText.charAt(2) + date.innerText.charAt(3));
        let month = parseFloat(date.innerText.charAt(5) + date.innerText.charAt(6));
        let day = parseFloat(date.innerText.charAt(8) + date.innerText.charAt(9));

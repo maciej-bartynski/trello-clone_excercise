@@ -3,6 +3,7 @@ import  MoveButton from './MoveButton.js';
 import DeleteButton from './DeleteButton.js';
 import Paragraph from './Paragraph.js';
 import SetDate from './SetDate.js';
+import CardSettings from './CardSettings.js';
 var cardstyle = {
     width: '98%',
     marginRight: '1%',
@@ -63,6 +64,12 @@ class Card extends React.Component {
                     newstorage={this.props.newstorage}
                     date={this.props.carddata.date}
                     markup={this.props.carddata.color}
+                />
+                <CardSettings
+                    cardid={this.props.cardid}
+                    objectid={this.props.objectid}
+                    newstorage={this.props.newstorage}
+                    sets={this.props.carddata.sets}
                 />
                 <Paragraph
                     description={this.props.carddata.description}
