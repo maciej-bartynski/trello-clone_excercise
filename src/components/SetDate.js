@@ -113,7 +113,7 @@ class SetDate extends Component {
     render() {
         return (
             this.props.date?
-                <div style= {dateoutputstyle} id={this.state.address+'outp'}>{this.props.date}</div>
+                <div className = 'datatimer' style= {dateoutputstyle} id={this.state.address+'outp'}>{this.props.date}</div>
             :
                 <div style= {managingpanel}>
                     <input style={dateinput} id={this.state.address+'dateinp'} type='date'/>

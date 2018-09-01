@@ -4,10 +4,10 @@ import DeleteButton from './DeleteButton.js';
 import Paragraph from './Paragraph.js';
 import SetDate from './SetDate.js';
 import CardSettings from './CardSettings.js';
+import TaskIcon from './TaskIcon.js';
 var cardstyle = {
     width: '98%',
     marginRight: '1%',
-    //border: '1px blue solid',
     borderRadius: '6px',
     marginBottom: '10px',
     paddingBottom: '10px',
@@ -57,6 +57,12 @@ class Card extends React.Component {
                         newstorage={this.props.newstorage}
                     />
                 </div>
+                <TaskIcon
+                    cardid={this.props.cardid}
+                    objectid={this.props.objectid}
+                    newstorage={this.props.newstorage}
+                    sets={this.props.carddata.sets}
+                />
                 <h3 style={titlestyle}>{this.props.carddata.title}</h3>
                 <SetDate
                     cardid={this.props.cardid}
