@@ -52,13 +52,14 @@ export const DivElement = styled.div `
 
 export const LastDivElement = styled.div `
     color: white;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
     justify-content: flex-end;
-    i {
+    i.firsticon {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -72,14 +73,14 @@ export const LastDivElement = styled.div `
         background: rgba(255, 255, 255, 0.5);
         color: rgba(0, 0, 255, 0.5);
     }
-    p {
+    p.firstparag {
         display: none;
     }
     @media only screen and (min-width: 768px){
-        p {
+        p.firstparag {
             display: block;
         }
-        i {
+        i.firsticon {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -92,7 +93,7 @@ export const LastDivElement = styled.div `
             color: rgba(255, 255, 255, 0.5);
             border: white;
         }
-        &:hover i {
+        &:hover i.firsticon {
             background: rgba(255, 255, 255, 0.5);
             color: rgba(0, 0, 255, 0.5);
             border: white;
