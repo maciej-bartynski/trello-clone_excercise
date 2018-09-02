@@ -1,42 +1,25 @@
 import React, { Component } from 'react';
-const paragraphstyle = {
-    width: '90%',
-    marginLeft: '4%',
-    lineHeight: '200%'
-}
-const addparagraphstyle = {
-    width: '90%',
-    marginLeft: '4%',
-    border: 'solid 1px blue'
-}
-const managingpanel = {
-    width: '90%',
-    marginLeft: '5%',
-    display: 'grid',
-    gridTemplateRows: '50px 30px',
-    gridTempateColumns: '100%',
-    border: 'solid 1px blue',
-    borderRadius: '6px',
-    overflow: 'hidden',
+import styled from 'styled-components';
 
-}
-const addbtnstyle = {
-    height: '100%',
-    width: '100%',
-    backgroundColor: 'blue',
-    color: 'white',
-    border: 'none',
-    outline: 'none'
+//WARNING: this file contains inline styles
+//Style objects are at the bottom of this document;
+var paragraphstyle;
+var addbtnstyle;
+var addinputstyle;
 
-}
-const addinputstyle = {
-    height: '100%',
-    width: '100%',
-    backgroundColor: 'white',
-    color: 'blue',
-    border: 'none',
-    outline: 'none'
-}
+const ManagingPanel = styled.div`
+    width: 100%;    
+    background: rgba(0,0,255,0.3);
+    display: grid;
+    margin-bottom: -10px;
+    padding: 5%;
+    grid-template-rows: 50px 30px;
+    grid-template-columns: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    box-sizing: border-box;
+`;
+
 class Paragraph extends Component {
     constructor(props) {
         super(props);
@@ -71,12 +54,38 @@ class Paragraph extends Component {
                     {this.props.description}
                 </p>
             :
-                <div style={managingpanel}>
-                    <input id={this.state.address+'inp'} style={addinputstyle} type="text"/>
+                <ManagingPanel>
+                    <textarea id={this.state.address+'inp'} style={addinputstyle} type="text"></textarea>
                     <button id={this.state.address+'btn'} style={addbtnstyle}>Add description</button>
-                </div>
+                </ManagingPanel>
         );
     }
 }
 
 export default Paragraph;
+
+paragraphstyle = {
+    width: '90%',
+    marginLeft: '4%',
+    lineHeight: '200%'
+}
+addbtnstyle = {
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'rgba(0,0,255,0.4)',
+    color: 'white',
+    border: 'none',
+    outline: 'none',
+    boxSizing: 'border-box',
+    cursor: 'pointer',
+}
+addinputstyle = {
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    color: 'blue',
+    border: 'none',
+    outline: 'none',
+    boxSizing: 'border-box',
+    fontFamily: 'sans-serif',
+}

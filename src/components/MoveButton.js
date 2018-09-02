@@ -1,13 +1,9 @@
 import React from 'react';
-const movebtnstyle = {
-    border: 'solid 1px blue',
-    borderRadius: '5px',
-    padding: '5px',
-    background: 'blue',
-    cursor: 'pointer',
-    color: 'white',
-    marginRight: '1px'
-}
+
+//WARNING: this file contains inline styles
+//Style object is at the bottom of this document;
+var movebtnstyle;
+
 class MoveButton extends React.Component {
     constructor(props){
         super(props);
@@ -43,3 +39,14 @@ class MoveButton extends React.Component {
     }
 }
 export default MoveButton;
+
+movebtnstyle = {
+    border: 'solid 1px rgba(0,0,255,0.5)',
+    borderRadius: '5px',
+    padding: '5px',
+    background: 'rgba(0,0,255,0.7)',
+    cursor: 'pointer',
+    color: 'white',
+    fontFamily: 'sans-serif',
+    marginRight: '1px'
+}

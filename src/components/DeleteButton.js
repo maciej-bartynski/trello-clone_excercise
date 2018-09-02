@@ -1,13 +1,9 @@
 import React from 'react';
-const deletebtnstyle = {
-    border: 'solid 1px red',
-    borderRadius: '5px',
-    padding: '5px',
-    background: 'red',
-    cursor: 'pointer',
-    color: 'white',
-    marginRight: '1px'
-}
+
+//WARNING: this file contains inline styles
+//Style object is at the bottom of this document;
+var deletebtnstyle;
+
 class DeleteButton extends React.Component {
     constructor(props) {
         super(props);
@@ -36,8 +32,21 @@ class DeleteButton extends React.Component {
     }
     render () {
         return (
-            <button style={deletebtnstyle} id={this.state.address}>delete</button>
+            <button style={deletebtnstyle} id={this.state.address}>
+                <i className="fas fa-trash"></i> Trash
+            </button>
         );
     }
 }
 export default DeleteButton;
+
+deletebtnstyle = {
+    border: 'solid 1px rgba(205,0,50,0.7)',
+    outline: 'none',
+    borderRadius: '5px',
+    padding: '5px',
+    background: 'rgba(205,0,50,0.7)',
+    cursor: 'pointer',
+    color: 'rgba(55,0,255,0.7)',
+    marginRight: '1px'
+}

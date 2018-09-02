@@ -6,10 +6,10 @@ class TaskIcon extends React.Component {
         this.state={
             address: 'taskicon' + this.props.objectid + this.props.cardid,
             stylize: {
-                fontSize: '19px',
+                fontSize: '15px',
                 color: 'white',
                 overflow: 'hidden',
-                backgroundColor: 'blue',
+                backgroundColor: 'rgba(0,0,255,0.6)',
                 borderRadius: '50%',
                 width: '33px',
                 height: '33px',

@@ -1,28 +1,19 @@
 import React from 'react';
-const panelstyle = {
-    width: '100%',
-    height: '100%',
-    border: 'blue solid 2px',
-    display: 'flex',
-    borderRadius: '6px',
-    overflow: 'hidden'
-}
-const inputstyle = {
-    width: '80%',
-    height: '100%',
-    border: 'none',
-    outline: 'none',
-    color: 'blue',
-    paddingLeft: '2%'
-}
-const btnstyle = {
-    width: '20%',
-    height: '100%',
-    border: 'none',
-    outline: 'none',
-    color: 'white',
-    backgroundColor: 'blue',
-}
+import styled from 'styled-components';
+
+const ManagingPanel = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 3px;
+    overflow: hidden;
+`;
+
+//WARNING: this file contains inline styles
+//Style objects are at the bottom of the document
+var inputstyle;
+var btnstyle;
+
 class AddCardButton extends React.Component {
     constructor(props){
         super(props);
@@ -47,11 +38,35 @@ class AddCardButton extends React.Component {
     }
     render() {
         return (
-            <div style={panelstyle}>
-                <input style={inputstyle} id={this.state.address+'name'} type="text"/>
-                <button style={btnstyle} id={this.state.address}>New card</button>
-            </div>
+            <ManagingPanel>
+                <input style={inputstyle} id={this.state.address+'name'} type="text"
+                    placeholder='Add task to this list'
+                />
+                <button style={btnstyle} id={this.state.address}>
+                    <i className='fas fa-thumbtack'></i>
+                </button>
+            </ManagingPanel>
         );
     }
 }
 export default AddCardButton;
+
+inputstyle = {
+    width: '80%',
+    height: '100%',
+    border: 'none',
+    outline: 'none',
+    color: 'blue',
+    paddingLeft: '2%',
+    backgroundColor: 'rgba(255,255,255,0.5)',
+}
+btnstyle = {
+    width: '20%',
+    height: '40px',
+    fontSize: '25px',
+    border: 'none',
+    outline: 'none',
+    color: 'rgba(0,0,255,0.4)',
+    backgroundColor: 'rgba(0,0,200,0.1)',
+    cursor: 'pointer'
+}

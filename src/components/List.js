@@ -2,6 +2,29 @@ import React from 'react';
 import Card from './Card.js';
 import DeleteListButton from './DeleteListButton.js';
 import AddCardButton from './AddCardButton.js';
+import styled from 'styled-components';
+
+const SingleList = styled.div`
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.21);
+    padding: 20px 1%;
+    box-sizing: border-box;
+    
+    -webkit-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+
+    width: 100%;
+
+    @media only screen and (min-width: 600px) {
+        width: 49%;
+    }
+
+    @media only screen and (min-width: 1000px) {
+        width: 32%;
+    }
+`;
 
 const listtitlestyle = {
     textTransform: 'uppercase',
@@ -9,24 +32,15 @@ const listtitlestyle = {
     color: 'blue'
 }
 
-var liststyle = {
-    width: '30%',
-    minWidth: '300px',
-    marginRight: '1%',
-    marginBottom: '10px',
-    border: 'solid 1px blue',
-    borderRadius: '10px',
-    backgroundColor: 'white',
-    padding: '20px 1%'
-}
-
-var managingpanelstyle = {
-    width: '100%',
-    display: 'grid',
-    gridTemplateColumns: '70% 20%',
-    gridColumnGap: '8%',
-    gridTemplateRows: 'auto',
-}
+const ManagingPanel = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 20%;
+    grid-column-gap: 8%;
+    grid-template-rows: auto;
+    overflow: hidden;
+    border-radius: 3px;
+`;
 
 class List extends React.Component{
     render() {
@@ -50,8 +64,8 @@ class List extends React.Component{
         }
         createCards(this.props.listdata.cards);
         return(
-            <div className='list' style={liststyle}>
-                <div style={managingpanelstyle}>
+            <SingleList>
+                <ManagingPanel>
                     <AddCardButton
                         newstorage={this.props.newstorage}
                         objectid={this.props.objectid}
@@ -60,10 +74,10 @@ class List extends React.Component{
                         newstorage={this.props.newstorage}
                         objectid={this.props.objectid}
                     />
-                </div>
+                </ManagingPanel>
                 <h2 style={listtitlestyle}>{this.props.listdata.column}</h2>
                 {array}
-            </div>
+            </SingleList>
         ) 
     }
 }

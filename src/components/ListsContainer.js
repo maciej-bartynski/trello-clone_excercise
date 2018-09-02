@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import List from './List';
-var listcontainerstyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    flexWrap: 'wrap',
-    width: '90%',
-    marginTop: '1%'
-}
+import styled from 'styled-components';
+
+const ListWrapper = styled.div`
+    box-sizing: border-box;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 1% auto 0 auto;
+    width: 99%;
+    @media only screen and (min-width: 992px){
+        width: 90%;
+    }  
+`;
+
 class ListsContainer extends Component {
     render () {
         let array = [];
@@ -25,9 +32,9 @@ class ListsContainer extends Component {
         })}
         eachListCreating(this.props.data);
         return(
-            <div style={listcontainerstyle}>
+            <ListWrapper>
                 {array}
-            </div>
+            </ListWrapper>
         );
     }
 }

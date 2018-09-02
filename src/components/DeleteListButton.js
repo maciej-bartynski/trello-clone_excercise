@@ -1,16 +1,8 @@
 import React from 'react';
-const deleteliststyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    background: 'red',
-    color: 'white',
-    border: 'none',
-    borderRadius: '6px',
-    width: "100%",
-    height: "100%",
-    padding: '0', margin: '0'
-}
+//WARNING: this file containt inline styles
+//Style object is at the bottom of this document
+var deleteliststyle;
+
 class DeleteListButton extends React.Component {
     constructor(props) {
         super(props);
@@ -36,8 +28,27 @@ class DeleteListButton extends React.Component {
     }
     render() {
         return (
-            <button style={deleteliststyle} id={this.state.address}>Delete list</button>
+            <button style={deleteliststyle} id={this.state.address}>
+                <i className="fas fa-trash"></i>
+            </button>
         );
     }
 }
 export default DeleteListButton;
+
+deleteliststyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    background: 'rgba(205,0,50,0.7)',
+    cursor: 'pointer',
+    color: 'rgba(0,0,255,0.4)',
+    fontSize: '25px',
+    border: 'none',
+    borderRadius: '3px',
+    width: "100%",
+    height: "100%",
+    padding: '0',
+    margin: '0'
+}

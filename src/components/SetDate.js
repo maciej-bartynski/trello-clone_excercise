@@ -1,49 +1,27 @@
 import React, {
     Component
 } from 'react';
+import styled from 'styled-components';
+//WARNING: This file contains inline styles
+//Style objects are included at the bottom of this document
+var dateoutputstyle;
+var dateinput;
+var btninput;
 
-const dateoutputstyle = {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: 'blue',
-    fontWeight: 'bolder',
-    letterSpacing: '0.1rem',
-    padding: '5px 1%'
-}
-const managingpanel = {
-    width: '100%',
-    backgroundColor: 'rgba(0,0,255,0.2)',
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    fontWeight: 'bolder',
-    letterSpacing: '0.1rem',
-    padding: '10px 5%'
-}
-const dateinput = {
-    backgroundColor: 'rgba(0,0,255,0.4)',
-    border: 'solid 2px white',
-    outline: '0',
-    height: '35px',
-    outline: '0',
-    boxSizing: 'border-box',
-    borderRadius: '5px 0 0 5px',
-    borderLeft: 'none'
-}
-const btninput = {
-    backgroundColor: 'rgba(0,0,255,0.7)',
-    color: 'white',
-    border: 'solid 2px white',
-    borderLeft: 'none',
-    borderRadius: '0 5px 5px 0',
-    outline: '0',
-    height: '35px',
-    width: '50px',
-    padding: '5px',
-    boxSizing: 'border-box',
-}
+const DataManagingPanel = styled.div `
+    width: 100%;
+    border-top: solid 1px rgba(0,0,255,0.2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 5% 5px 5%;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    color: blue;
+    font-weight: bolder;
+`;
+
 class SetDate extends Component {
     constructor(props) {
         super(props);
@@ -115,12 +93,49 @@ class SetDate extends Component {
             this.props.date?
                 <div className = 'datatimer' style= {dateoutputstyle} id={this.state.address+'outp'}>{this.props.date}</div>
             :
-                <div style= {managingpanel}>
+                <DataManagingPanel>
+                    Deadline: 
                     <input style={dateinput} id={this.state.address+'dateinp'} type='date'/>
                     <button onClick={this.deadline} style={btninput} id={this.state.address+'datebtn'}>Ok</button>
-                </div>
+                </DataManagingPanel>
            );
     }
 }
 
 export default SetDate;
+
+dateoutputstyle = {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: 'blue',
+    fontWeight: 'bolder',
+    letterSpacing: '0.1rem',
+    padding: '5px 1%'
+}
+
+dateinput = {
+    backgroundColor: 'rgba(0,0,255,0.4)',
+    border: 'none',
+    outline: '0',
+    height: '30px',
+    outline: '0',
+    boxSizing: 'border-box',
+    borderRadius: '3px 0 0 3px',
+    color: 'white',
+    marginLeft: '4px'
+}
+
+btninput = {
+    backgroundColor: 'rgba(0,0,255,0.5)',
+    color: 'white',
+    border: 'none',
+    borderRadius: '0 3px 3px 0',
+    outline: '0',
+    height: '30px',
+    width: '50px',
+    padding: '5px',
+    boxSizing: 'border-box',
+    cursor: 'pointer'
+}
