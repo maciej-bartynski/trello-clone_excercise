@@ -9,7 +9,7 @@ const Bg = styled.div`
     left: 0;
     z-index: -1;
     opacity: 0.3;
-    background-image: url('./../images/office.jpg');
+    background-image: url('./images/office.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
