@@ -1,3 +1,43 @@
+Below (much more below) you can read readme.md file wrote by react library creators.
+In order to read short documentation of App itself, please navigate to HowToUse.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
