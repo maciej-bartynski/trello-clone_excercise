@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 export const HeaderElement = styled.header`
-    -webkit-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
-    -moz-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
-    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+    -webkit-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
 
     font-size: 14px;
 
@@ -12,7 +12,11 @@ export const HeaderElement = styled.header`
     border-radius: 0;
     padding: 5px;
     background-color: rgba(0, 0, 255, 0.2);
-    
+    transition: background-color 600ms;
+    transition: -webkit-box-shadow 600ms;
+    transition: -moz-box-shadow 600ms;
+    transition: box-shadow 600ms;
+
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 14fr;
@@ -41,4 +45,12 @@ export const HeaderElement = styled.header`
         grid-column-gap: 2px;
         grid-template-rows: auto;
     }
+
+        &:hover {
+            background-color: rgba(0, 0, 255, 0.82);
+            -webkit-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+            -moz-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+            box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+        }
+
 `;

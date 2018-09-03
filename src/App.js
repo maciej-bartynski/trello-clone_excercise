@@ -3,6 +3,7 @@ import './database/initialdata.js';
 import {MainContainer} from './styl-comp-app.js';
 import ListsContainer from './components/ListsContainer.js';
 import Header from './components/Header.js';
+import Background from './components/Background.js';
 
 class App extends Component {
   constructor(props){
@@ -21,6 +22,7 @@ class App extends Component {
   render() {
     return (
       <MainContainer>
+        <Background/>
         <Header newstorage={this.newStorage}/>
         <ListsContainer 
           data={this.state.data}

@@ -10,11 +10,14 @@ const SingleList = styled.div`
     background-color: rgba(255, 255, 255, 0.21);
     padding: 20px 1%;
     box-sizing: border-box;
+    transition: background-color 600ms;
+    transition: -webkit-box-shadow 600ms;
+    transition: -moz-box-shadow 600ms;
+    transition: box-shadow 600ms;
+    -webkit-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
     
-    -webkit-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
-    -moz-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
-    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
-
     width: 100%;
 
     @media only screen and (min-width: 600px) {
@@ -23,6 +26,13 @@ const SingleList = styled.div`
 
     @media only screen and (min-width: 1000px) {
         width: 32%;
+    }
+
+    &:hover {
+       background-color: rgba(255, 255, 255, 0.81); 
+       -webkit-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+        -moz-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
+        box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
     }
 `;
 
