@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import './database/initialdata.js';
 import {MainContainer} from './styl-comp-app.js';
 import ListsContainer from './components/ListsContainer.js';

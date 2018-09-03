@@ -120,7 +120,6 @@ dateinput = {
     border: 'none',
     outline: '0',
     height: '30px',
-    outline: '0',
     boxSizing: 'border-box',
     borderRadius: '3px 0 0 3px',
     color: 'white',
