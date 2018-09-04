@@ -39,31 +39,31 @@ class HelpContainer extends React.Component {
                     (or tap to return)</p>
                     <div>
                         <i className="fas fa-list"></i>
-                        <p>Add new, empty list of tasks</p>
+                        <p>Head bar (top of the screen): type name and tap list icon to add new, empty List</p>
                     </div>
                     <div>
                         <i className="fas fa-trash"></i>
-                        <p>Or delete an existing one, along with all cards included</p>
+                        <p>List (column): tap red icon at the top right corner to delete this List, along with all cards included</p>
                     </div>
                     <div>
                         <i className="fas fa-thumbtack"></i>
-                        <p>At the top of created List, type a name and add a task</p>
+                        <p>List (column): type name of task and add an empty, named Card</p>
                     </div>
                     <div>
                         <i className="fas fa-home"></i>
-                       <p>Set the Task Icon - just for fun</p>
+                       <p>Card (tilt): tap default home icon to set Task Icon - just for fun</p>
                     </div>
                     <div>
                         <i className="fas fa-star"></i>
                         <i className="fas fa-plus"></i>
-                        <p>Set the difficulty level and priority.</p>
+                        <p>Card (tilt): set the difficulty level and priority</p>
                     </div>
                     <div>
                         <i className="fas fa-calendar-alt"></i>
                         <p>If deadline is set,
-                            green background means: there is still a plenty of time.
-                            Yellow: deadline is coming!
-                            Red : it is to late.</p>
+                            green bar means: chill, there is still a plenty of time.
+                            Yellow: be stressed, deadline is coming!
+                            Red: chill again, it's to late</p>
                     </div>
                 </Container>
             </Positioner> 

@@ -4,6 +4,10 @@ import DeleteListButton from './DeleteListButton.js';
 import AddCardButton from './AddCardButton.js';
 import styled from 'styled-components';
 
+//WARNING: this file containt inline styles
+//Style object is at the bottom of this document
+var listtitlestyle;
+
 const SingleList = styled.div`
     margin-bottom: 10px;
     border-radius: 5px;
@@ -35,12 +39,6 @@ const SingleList = styled.div`
         box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.41);
     }
 `;
-
-const listtitlestyle = {
-    textTransform: 'uppercase',
-    letterSpacing: '0.1rem',
-    color: 'blue'
-}
 
 const ManagingPanel = styled.div`
     width: 100%;
@@ -92,3 +90,9 @@ class List extends React.Component{
     }
 }
 export default List;
+
+listtitlestyle = {
+    textTransform: 'uppercase',
+    letterSpacing: '0.1rem',
+    color: 'blue'
+}

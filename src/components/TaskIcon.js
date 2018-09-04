@@ -1,4 +1,10 @@
 import React from 'react';
+
+//WARNING: This file contains inline styles
+//Style objects are included at the bottom of this document
+var taskiconbeltstyle;
+var setnewiconstyle;
+
 class TaskIcon extends React.Component {
     
     constructor(props){
@@ -77,7 +83,7 @@ class TaskIcon extends React.Component {
 }
 export default TaskIcon;
 
-var taskiconbeltstyle= {
+taskiconbeltstyle= {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -85,7 +91,7 @@ var taskiconbeltstyle= {
     marginTop: '15px'
 }
 
-var setnewiconstyle = {
+setnewiconstyle = {
     width: '100%',
     display: 'flex',
     alignItems: 'center',

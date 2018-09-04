@@ -1,5 +1,11 @@
 import React from 'react';
 
+//WARNING: this file contains inline styles
+//Style objects are includet at the bottom of this document
+var prioritystyle;
+var diffstyle;
+var setspanelstyle;
+
 class CardSettings extends React.Component{
     constructor(props){
         super(props);
@@ -56,7 +62,7 @@ class CardSettings extends React.Component{
 }
 export default CardSettings;
 
-var prioritystyle={
+prioritystyle={
     textTransform: 'uppercase',
     fontSize: '0.7rem',
     letterSpacing: '0.1rem',
@@ -68,7 +74,7 @@ var prioritystyle={
     marginBottom: '10px',
 }
 
-var diffstyle = {
+diffstyle = {
     textTransform: 'uppercase',
     fontSize: '0.7rem',
     letterSpacing: '0.1rem',
@@ -79,7 +85,7 @@ var diffstyle = {
     minWidth: '100px',
 }
 
-var setspanelstyle = {
+setspanelstyle = {
     display: 'flex',
     flexWrap: 'wrap',
     padding: '10px 5%'
